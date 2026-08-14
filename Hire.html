@@ -1,0 +1,475 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KomersAfric | Premium Home Appliances Showcase</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            dark: '#0f0f11',
+                            card: '#18181b',
+                            gold: '#f59e0b',
+                            'gold-hover': '#d97706',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+      
+        html { scroll-behavior: smooth; }
+        body { -webkit-font-smoothing: antialiased; }
+    </style>
+</head>
+<body class="bg-gray-950 text-gray-100 font-sans">
+
+    <!-- ==============================
+         HEADER & NAVIGATION
+         ============================== -->
+    <header class="bg-black/90 backdrop-blur-md sticky top-0 z-50 border-b border-amber-500/20">
+        <nav class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+            <!-- Brand Logo -->
+            <a href="#" class="flex items-center gap-3">
+                <div class="w-10 h-10 rounded-full bg-gradient-to-br from-amber-400 to-yellow-600 flex items-center justify-center font-extrabold text-black text-lg">KA</div>
+                <div class="flex flex-col">
+                    <span class="text-2xl font-extrabold text-white tracking-tight">Komers<span class="text-amber-400">Afric</span></span>
+                    <span class="text-[9px] text-gray-400 uppercase tracking-widest -mt-1">Faith. Knowledge. Enterprise</span>
+                </div>
+            </a>
+
+            <!-- Navigation Links -->
+            <div class="hidden md:flex items-center gap-8 text-sm font-medium text-gray-300">
+                <a href="#about" class="hover:text-amber-400 transition">About Us</a>
+                <a href="#preview" class="hover:text-amber-400 transition">Catalog Preview</a>
+                <a href="#contact" class="hover:text-amber-400 transition">Contact</a>
+            </div>
+
+            <!-- Header Actions: User Auth -->
+<div class="flex items-center gap-3">
+    <!-- Cart Icon (Kept for quick access) -->
+    <a href="#cart" title="View Cart" class="relative p-2 text-gray-300 hover:text-amber-400 transition rounded-full hover:bg-gray-900">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z" />
+        </svg>
+        <span class="absolute -top-1 -right-1 bg-amber-500 text-black text-[10px] font-bold rounded-full h-4 w-4 flex items-center justify-center">0</span>
+    </a>
+
+    <!-- Sign In Button -->
+    <button onclick="toggleAuthModal()" class="text-xs font-semibold text-gray-300 hover:text-amber-400 px-3 py-2 transition">
+        Log In
+    </button>
+
+    <!-- Account / Portal Button -->
+    <button onclick="toggleAuthModal()" class="bg-amber-500 hover:bg-amber-400 text-black text-xs font-bold px-4 py-2 rounded-lg transition shadow-md">
+        Sign Up
+    </button>
+</div>
+
+        </nav>
+    </header>
+
+    <!-- ==============================
+         HERO SECTION
+         ============================== -->
+    <section id="about" class="relative py-16 md:py-24 bg-gradient-to-b from-black to-gray-950 border-b border-gray-900">
+        <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-12 items-center">
+            <div class="space-y-6">
+                <span class="inline-block bg-amber-500/10 text-amber-400 border border-amber-500/30 text-xs font-semibold px-3 py-1 rounded-full uppercase tracking-wider">
+                    Welcome to KomersAfric
+                </span>
+                <h1 class="text-4xl md:text-5xl font-extrabold text-white tracking-tight leading-tight">
+                    Upgrade Your Space with <span class="text-amber-400">Easy Installments</span>
+                </h1>
+                <p class="text-gray-400 text-sm md:text-base leading-relaxed">
+                    Explore our range of refrigerators, smart televisions, energy-efficient air conditioners, and water dispensers. Take advantage of flexible payment structures tailored for your convenience.
+                </p>
+                <div class="pt-2 flex flex-wrap gap-4">
+                    <a href="#preview" class="bg-amber-500 hover:bg-amber-400 text-black font-bold px-6 py-3 rounded-xl transition shadow-lg text-sm">
+                        View Product Previews
+                    </a>
+                    <a href="#contact" class="border border-gray-800 hover:border-amber-500/50 text-gray-300 font-medium px-6 py-3 rounded-xl transition text-sm">
+                        Contact Sales
+                    </a>
+                </div>
+            </div>
+
+            <div class="relative bg-gray-900/60 border border-amber-500/20 rounded-3xl p-8 flex flex-col justify-center items-center text-center backdrop-blur-sm">
+                <div class="w-14 h-14 rounded-2xl bg-amber-500/10 border border-amber-500/30 flex items-center justify-center text-amber-400 mb-4">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+                    </svg>
+                </div>
+                <h3 class="text-xl font-bold text-white">Guaranteed Quality & Support</h3>
+                <p class="text-xs text-gray-400 mt-2 max-w-xs">All products feature full manufacturer warranty protection and doorstep delivery options.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==============================
+         PRODUCT PREVIEW SECTION
+         ============================== -->
+    <section id="preview" class="py-20 max-w-7xl mx-auto px-6">
+        <div class="text-center max-w-2xl mx-auto mb-16">
+            <h2 class="text-3xl font-extrabold text-white tracking-tight">Appliance Previews</h2>
+            <p class="text-gray-400 text-sm mt-2">Browse technical specifications and dimensions for featured catalog models.</p>
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+
+            <!-- Card 1: Roch Refrigerator -->
+            <div class="bg-gray-900/90 rounded-2xl border border-gray-800 p-5 hover:border-amber-500/40 transition flex flex-col justify-between group">
+                <div>
+                    <div class="h-60 rounded-xl overflow-hidden bg-black/40 flex items-center justify-center p-3 mb-4">
+                        <img src="https://images.unsplash.com/photo-1584992236310-6edddc08acff?auto=format&fit=crop&w=600&q=80" alt="Roch RFR-290BD-B Refrigerator" class="h-full w-full object-cover group-hover:scale-105 transition duration-300 rounded-lg">
+                    </div>
+                    <span class="text-[10px] font-bold uppercase tracking-wider text-amber-400 bg-amber-500/10 border border-amber-500/20 px-2.5 py-1 rounded-md">Refrigeration</span>
+                    <h3 class="text-lg font-bold text-white mt-3">ROCH RFR-290BD-B</h3>
+                    <p class="text-xs text-amber-400/90 font-medium">Bottom Mount with Water Dispenser</p>
+                    <ul class="text-xs text-gray-400 mt-3 space-y-1">
+                        <li>• <strong>Capacity:</strong> 240 Liters Volume</li>
+                        <li>• <strong>Dimensions:</strong> 550 × 580 × 1730 mm</li>
+                        <li>• Integrated Water Dispenser Unit</li>
+                    </ul>
+                </div>
+                <div class="mt-5 pt-4 border-t border-gray-800 flex justify-between items-center text-xs">
+                    <span class="text-gray-500">Model: RFR-290BD-B</span>
+                    <a href="#shop-banner" class="text-amber-400 font-bold hover:underline">View Plan →</a>
+                </div>
+            </div>
+
+            <!-- Card 2: Side-by-Side Refrigerator -->
+            <div class="bg-gray-900/90 rounded-2xl border border-gray-800 p-5 hover:border-amber-500/40 transition flex flex-col justify-between group">
+                <div>
+                    <div class="h-60 rounded-xl overflow-hidden bg-black/40 flex items-center justify-center p-3 mb-4">
+                        <img src="https://images.unsplash.com/photo-1571175443880-49e1d25b2bc5?auto=format&fit=crop&w=600&q=80" alt="Side-by-Side Refrigerator" class="h-full w-full object-cover group-hover:scale-105 transition duration-300 rounded-lg">
+                    </div>
+                    <span class="text-[10px] font-bold uppercase tracking-wider text-amber-400 bg-amber-500/10 border border-amber-500/20 px-2.5 py-1 rounded-md">Refrigeration</span>
+                    <h3 class="text-lg font-bold text-white mt-3">Side-by-Side Dispenser Fridge</h3>
+                    <p class="text-xs text-amber-400/90 font-medium">Dual-Door Brushed Stainless Finish</p>
+                    <ul class="text-xs text-gray-400 mt-3 space-y-1">
+                        <li>• <strong>Type:</strong> Large Capacity Side-by-Side</li>
+                        <li>• Door-Mounted Cold Water Dispenser</li>
+                        <li>• Digital Temperature Control Panel</li>
+                    </ul>
+                </div>
+                <div class="mt-5 pt-4 border-t border-gray-800 flex justify-between items-center text-xs">
+                    <span class="text-gray-500">Premium Series</span>
+                    <a href="#shop-banner" class="text-amber-400 font-bold hover:underline">View Plan →</a>
+                </div>
+            </div>
+
+            <!-- Card 3: Upright Fridge -->
+            <div class="bg-gray-900/90 rounded-2xl border border-gray-800 p-5 hover:border-amber-500/40 transition flex flex-col justify-between group">
+                <div>
+                    <div class="h-60 rounded-xl overflow-hidden bg-black/40 flex items-center justify-center p-3 mb-4">
+                        <img src="https://images.unsplash.com/photo-1536353284924-9220c43112be?auto=format&fit=crop&w=600&q=80" alt="Upright Single Door Fridge" class="h-full w-full object-cover group-hover:scale-105 transition duration-300 rounded-lg">
+                    </div>
+                    <span class="text-[10px] font-bold uppercase tracking-wider text-amber-400 bg-amber-500/10 border border-amber-500/20 px-2.5 py-1 rounded-md">Refrigeration</span>
+                    <h3 class="text-lg font-bold text-white mt-3">Upright Standing Refrigerator</h3>
+                    <p class="text-xs text-amber-400/90 font-medium">Compact High-Efficiency Design</p>
+                    <ul class="text-xs text-gray-400 mt-3 space-y-1">
+                        <li>• High Energy Savings Rating</li>
+                        <li>• Sturdy Modern Ergonomic Handle</li>
+                        <li>• Ideal for Home & Office Spaces</li>
+                    </ul>
+                </div>
+                <div class="mt-5 pt-4 border-t border-gray-800 flex justify-between items-center text-xs">
+                    <span class="text-gray-500">Eco Series</span>
+                    <a href="#shop-banner" class="text-amber-400 font-bold hover:underline">View Plan →</a>
+                </div>
+            </div>
+
+            <!-- Card 4: SIGMA Breeze Air Conditioner -->
+            <div class="bg-gray-900/90 rounded-2xl border border-gray-800 p-5 hover:border-amber-500/40 transition flex flex-col justify-between group">
+                <div>
+                    <div class="h-60 rounded-xl overflow-hidden bg-black/40 flex items-center justify-center p-3 mb-4">
+                        <img src="https://images.unsplash.com/photo-1621905251189-08b45d6a269e?auto=format&fit=crop&w=600&q=80" alt="SIGMA Breeze Split AC" class="h-full w-full object-cover group-hover:scale-105 transition duration-300 rounded-lg">
+                    </div>
+                    <span class="text-[10px] font-bold uppercase tracking-wider text-amber-400 bg-amber-500/10 border border-amber-500/20 px-2.5 py-1 rounded-md">Cooling</span>
+                    <h3 class="text-lg font-bold text-white mt-3">SIGMA Breeze Split AC</h3>
+                    <p class="text-xs text-amber-400/90 font-medium">Indoor & Outdoor Unit Set</p>
+                    <ul class="text-xs text-gray-400 mt-3 space-y-1">
+                        <li>• Hidden LED Temperature Display</li>
+                        <li>• Fast Cooling & Silent Operation</li>
+                        <li>• Durable Outdoor Compressor Unit</li>
+                    </ul>
+                </div>
+                <div class="mt-5 pt-4 border-t border-gray-800 flex justify-between items-center text-xs">
+                    <span class="text-gray-500">Sigma Breeze</span>
+                    <a href="#shop-banner" class="text-amber-400 font-bold hover:underline">View Plan →</a>
+                </div>
+            </div>
+
+            <!-- Card 5: SIGMA Breeze Inverter AC -->
+            <div class="bg-gray-900/90 rounded-2xl border border-gray-800 p-5 hover:border-amber-500/40 transition flex flex-col justify-between group">
+                <div>
+                    <div class="h-60 rounded-xl overflow-hidden bg-black/40 flex items-center justify-center p-3 mb-4">
+                        <img src="https://images.unsplash.com/photo-1614633833026-062086392398?auto=format&fit=crop&w=600&q=80" alt="SIGMA Breeze Inverter AC" class="h-full w-full object-cover group-hover:scale-105 transition duration-300 rounded-lg">
+                    </div>
+                    <span class="text-[10px] font-bold uppercase tracking-wider text-amber-400 bg-amber-500/10 border border-amber-500/20 px-2.5 py-1 rounded-md">Cooling</span>
+                    <h3 class="text-lg font-bold text-white mt-3">SIGMA Breeze Inverter AC</h3>
+                    <p class="text-xs text-amber-400/90 font-medium">Eco Inverter Smart Cooling</p>
+                    <ul class="text-xs text-gray-400 mt-3 space-y-1">
+                        <li>• Smart Inverter Compressor Technology</li>
+                        <li>• Up to 60% Power Savings</li>
+                        <li>• Eco-Friendly Refrigerant</li>
+                    </ul>
+                </div>
+                <div class="mt-5 pt-4 border-t border-gray-800 flex justify-between items-center text-xs">
+                    <span class="text-gray-500">Inverter Tech</span>
+                    <a href="#shop-banner" class="text-amber-400 font-bold hover:underline">View Plan →</a>
+                </div>
+            </div>
+
+            <!-- Card 6: SIGMA Classic Split AC -->
+            <div class="bg-gray-900/90 rounded-2xl border border-gray-800 p-5 hover:border-amber-500/40 transition flex flex-col justify-between group">
+                <div>
+                    <div class="h-60 rounded-xl overflow-hidden bg-black/40 flex items-center justify-center p-3 mb-4">
+                        <img src="https://images.unsplash.com/photo-1631541909061-71e349d1f203?auto=format&fit=crop&w=600&q=80" alt="SIGMA Split AC Unit" class="h-full w-full object-cover group-hover:scale-105 transition duration-300 rounded-lg">
+                    </div>
+                    <span class="text-[10px] font-bold uppercase tracking-wider text-amber-400 bg-amber-500/10 border border-amber-500/20 px-2.5 py-1 rounded-md">Cooling</span>
+                    <h3 class="text-lg font-bold text-white mt-3">SIGMA High-Cap Split AC</h3>
+                    <p class="text-xs text-amber-400/90 font-medium">Wall-Mounted Dual System</p>
+                    <ul class="text-xs text-gray-400 mt-3 space-y-1">
+                        <li>• High Efficiency Energy Rating</li>
+                        <li>• Rapid Ambient Cooling Mode</li>
+                        <li>• Heavy-Duty Galvanized Outdoor Fan</li>
+                    </ul>
+                </div>
+                <div class="mt-5 pt-4 border-t border-gray-800 flex justify-between items-center text-xs">
+                    <span class="text-gray-500">R410 / R32 Models</span>
+                    <a href="#shop-banner" class="text-amber-400 font-bold hover:underline">View Plan →</a>
+                </div>
+            </div>
+
+            <!-- Card 7: Smart Television -->
+            <div class="bg-gray-900/90 rounded-2xl border border-gray-800 p-5 hover:border-amber-500/40 transition flex flex-col justify-between group">
+                <div>
+                    <div class="h-60 rounded-xl overflow-hidden bg-black/40 flex items-center justify-center p-3 mb-4">
+                        <img src="https://images.unsplash.com/photo-1593784991095-a205069470b6?auto=format&fit=crop&w=600&q=80" alt="Ultra HD Smart TV" class="h-full w-full object-cover group-hover:scale-105 transition duration-300 rounded-lg">
+                    </div>
+                    <span class="text-[10px] font-bold uppercase tracking-wider text-amber-400 bg-amber-500/10 border border-amber-500/20 px-2.5 py-1 rounded-md">Television</span>
+                    <h3 class="text-lg font-bold text-white mt-3">Sigma / TCL 4K Smart TV</h3>
+                    <p class="text-xs text-amber-400/90 font-medium">Frameless Ultra HD Display</p>
+                    <ul class="text-xs text-gray-400 mt-3 space-y-1">
+                        <li>• Vibrant Color Display Panel</li>
+                        <li>• Built-in Smart Apps & Satellite Decoder</li>
+                        <li>• Multiple HDMI & USB Ports</li>
+                    </ul>
+                </div>
+                <div class="mt-5 pt-4 border-t border-gray-800 flex justify-between items-center text-xs">
+                    <span class="text-gray-500">32" - 65" Available</span>
+                    <a href="#shop-banner" class="text-amber-400 font-bold hover:underline">View Plan →</a>
+                </div>
+            </div>
+
+            <!-- Card 8: TCL Bottom Loading Water Dispenser -->
+            <div class="bg-gray-900/90 rounded-2xl border border-gray-800 p-5 hover:border-amber-500/40 transition flex flex-col justify-between group">
+                <div>
+                    <div class="h-60 rounded-xl overflow-hidden bg-black/40 flex items-center justify-center p-3 mb-4">
+                        <img src="https://images.unsplash.com/photo-1548839140-29a749e1cf4e?auto=format&fit=crop&w=600&q=80" alt="TCL Bottom Loading Water Dispenser" class="h-full w-full object-cover group-hover:scale-105 transition duration-300 rounded-lg">
+                    </div>
+                    <span class="text-[10px] font-bold uppercase tracking-wider text-amber-400 bg-amber-500/10 border border-amber-500/20 px-2.5 py-1 rounded-md">Dispensers</span>
+                    <h3 class="text-lg font-bold text-white mt-3">TCL Bottom-Loading Dispenser</h3>
+                    <p class="text-xs text-amber-400/90 font-medium">Concealed Bottle Cabinet</p>
+                    <ul class="text-xs text-gray-400 mt-3 space-y-1">
+                        <li>• Easy Bottom Bottle Loading System</li>
+                        <li>• Multi-Temperature Water Outlets</li>
+                        <li>• Sleek Modern White Finish</li>
+                    </ul>
+                </div>
+                <div class="mt-5 pt-4 border-t border-gray-800 flex justify-between items-center text-xs">
+                    <span class="text-gray-500">TCL Series</span>
+                    <a href="#shop-banner" class="text-amber-400 font-bold hover:underline">View Plan →</a>
+                </div>
+            </div>
+
+            <!-- Card 9: Midea Water Dispenser -->
+            <div class="bg-gray-900/90 rounded-2xl border border-gray-800 p-5 hover:border-amber-500/40 transition flex flex-col justify-between group">
+                <div>
+                    <div class="h-60 rounded-xl overflow-hidden bg-black/40 flex items-center justify-center p-3 mb-4">
+                        <img src="https://images.unsplash.com/photo-1517646287270-a5a9ca602e5c?auto=format&fit=crop&w=600&q=80" alt="Midea Water Dispenser" class="h-full w-full object-cover group-hover:scale-105 transition duration-300 rounded-lg">
+                    </div>
+                    <span class="text-[10px] font-bold uppercase tracking-wider text-amber-400 bg-amber-500/10 border border-amber-500/20 px-2.5 py-1 rounded-md">Dispensers</span>
+                    <h3 class="text-lg font-bold text-white mt-3">Midea Water Dispenser</h3>
+                    <p class="text-xs text-amber-400/90 font-medium">Standing Top-Load Model</p>
+                    <ul class="text-xs text-gray-400 mt-3 space-y-1">
+                        <li>• Push Button Dispense Control</li>
+                        <li>• Removable Easy-Clean Drip Tray</li>
+                        <li>• Hot & Cold Water Functions</li>
+                    </ul>
+                </div>
+                <div class="mt-5 pt-4 border-t border-gray-800 flex justify-between items-center text-xs">
+                    <span class="text-gray-500">Midea Series</span>
+                    <a href="#shop-banner" class="text-amber-400 font-bold hover:underline">View Plan →</a>
+                </div>
+            </div>
+
+            <!-- Card 10: Sonashi Water Dispenser -->
+            <div class="bg-gray-900/90 rounded-2xl border border-gray-800 p-5 hover:border-amber-500/40 transition flex flex-col justify-between group">
+                <div>
+                    <div class="h-60 rounded-xl overflow-hidden bg-black/40 flex items-center justify-center p-3 mb-4">
+                        <img src="https://images.unsplash.com/photo-1527864550417-7fd91fc51a46?auto=format&fit=crop&w=600&q=80" alt="Sonashi Water Dispenser" class="h-full w-full object-cover group-hover:scale-105 transition duration-300 rounded-lg">
+                    </div>
+                    <span class="text-[10px] font-bold uppercase tracking-wider text-amber-400 bg-amber-500/10 border border-amber-500/20 px-2.5 py-1 rounded-md">Dispensers</span>
+                    <h3 class="text-lg font-bold text-white mt-3">Sonashi 2-Tap Water Dispenser</h3>
+                    <p class="text-xs text-amber-400/90 font-medium">Dual Hot & Cold Tap Unit</p>
+                    <ul class="text-xs text-gray-400 mt-3 space-y-1">
+                        <li>• Dual Temperature Taps (Hot / Cold)</li>
+                        <li>• High Efficiency Compressor Cooling</li>
+                        <li>• Compact Floor Standing Design</li>
+                    </ul>
+                </div>
+                <div class="mt-5 pt-4 border-t border-gray-800 flex justify-between items-center text-xs">
+                    <span class="text-gray-500">Sonashi Series</span>
+                    <a href="#shop-banner" class="text-amber-400 font-bold hover:underline">View Plan →</a>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- ==============================
+         SHOP NOW CALL TO ACTION BANNER
+         ============================== -->
+    <section id="shop-banner" class="max-w-7xl mx-auto px-6 py-8">
+        <div class="bg-gradient-to-r from-amber-500 via-yellow-500 to-amber-600 rounded-3xl p-8 md:p-10 text-black flex flex-col md:flex-row items-center justify-between gap-6 shadow-2xl">
+            <div>
+                <h2 class="text-2xl md:text-3xl font-extrabold tracking-tight">Ready to Purchase or Set Up an Installment Plan?</h2>
+                <p class="text-black/80 text-xs md:text-sm mt-1">Select your item, view monthly installment schedules, and start your order.</p>
+            </div>
+            <a href="tel:0541434391" class="bg-black hover:bg-gray-900 text-white font-bold px-8 py-4 rounded-xl transition shadow-xl shrink-0 text-sm flex items-center gap-2">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 text-amber-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 100 4 2 2 0 000-4z" />
+                </svg>
+                Shop Now
+            </a>
+        </div>
+    </section>
+
+    <!-- ==============================
+         FOOTER & CONTACT INFO
+         ============================== -->
+    <footer id="contact" class="bg-black border-t border-gray-900 mt-20 pt-16 pb-12">
+        <div class="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-3 gap-12 mb-12">
+            
+            <!-- Company Info -->
+            <div>
+                <div class="flex items-center gap-3 mb-4">
+                    <div class="w-8 h-8 rounded-full bg-amber-500 flex items-center justify-center font-bold text-black text-sm">KA</div>
+                    <span class="text-xl font-bold text-white">KomersAfric</span>
+                </div>
+                <p class="text-xs text-gray-400 leading-relaxed">
+                    Delivering flexible home ownership and equipment financing solutions across Ghana.
+                </p>
+                <p class="text-[11px] text-amber-400 mt-4 font-semibold uppercase tracking-widest">Faith • Knowledge • Enterprise</p>
+            </div>
+
+            <!-- Quick Contacts -->
+            <div>
+                <h4 class="text-sm font-bold text-white uppercase tracking-wider mb-4">Contact Information</h4>
+                <ul class="text-xs text-gray-400 space-y-3">
+                    <li class="flex items-center gap-2">
+                        <span>📞 Phone / WhatsApp:</span>
+                        <a href="tel:0541434391" class="text-white hover:text-amber-400 transition">(0233) 0541434391</a>
+                    </li>
+                    <li class="flex items-center gap-2">
+                        <span>🌐 Web Portal:</span>
+                        <a href="http://www.komersafric.com" target="_blank" class="text-white hover:text-amber-400 transition">www.komersafric.com</a>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Social Links -->
+            <div>
+                <h4 class="text-sm font-bold text-white uppercase tracking-wider mb-4">Connect With Us</h4>
+                <div class="flex gap-3">
+                    <a href="#" class="w-9 h-9 rounded-lg bg-gray-900 border border-gray-800 flex items-center justify-center text-gray-400 hover:text-amber-400 hover:border-amber-500/50 transition text-xs">
+                        FB
+                    </a>
+                    <a href="#" class="w-9 h-9 rounded-lg bg-gray-900 border border-gray-800 flex items-center justify-center text-gray-400 hover:text-amber-400 hover:border-amber-500/50 transition text-xs">
+                        IG
+                    </a>
+                    <a href="https://wa.me/233541434391" class="w-9 h-9 rounded-lg bg-gray-900 border border-gray-800 flex items-center justify-center text-gray-400 hover:text-amber-400 hover:border-amber-500/50 transition text-xs">
+                        WA
+                    </a>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="max-w-7xl mx-auto px-6 border-t border-gray-900 pt-6 text-center text-[11px] text-gray-600">
+            &copy; KomersAfric. All rights reserved.
+        </div>
+    </footer>
+  <!-- ==============================
+     CUSTOMER AUTH MODAL
+     ============================== -->
+<div id="authModal" class="fixed inset-0 bg-black/80 backdrop-blur-sm z-50 hidden items-center justify-center p-4">
+    <div class="bg-gray-900 border border-gray-800 rounded-2xl w-full max-w-md p-6 relative shadow-2xl">
+        
+        <!-- Close Button -->
+        <button onclick="toggleAuthModal()" class="absolute top-4 right-4 text-gray-400 hover:text-white text-lg font-bold">
+            ✕
+        </button>
+
+        <!-- Header -->
+        <div class="text-center mb-6">
+            <h3 class="text-xl font-bold text-white">Customer Portal</h3>
+            <p class="text-xs text-gray-400 mt-1">Sign in to track orders & manage your installment plans</p>
+        </div>
+
+        <!-- Form Fields -->
+        <form class="space-y-4" onsubmit="event.preventDefault(); alert('Backend authentication required.');">
+            <div>
+                <label class="block text-xs text-gray-400 mb-1">Email or Phone Number</label>
+                <input type="text" placeholder="e.g. 0541234567" class="w-full bg-gray-950 border border-gray-800 rounded-xl px-4 py-2.5 text-xs text-white focus:outline-none focus:border-amber-500" required>
+            </div>
+            <div>
+                <label class="block text-xs text-gray-400 mb-1">Password</label>
+                <input type="password" placeholder="••••••••" class="w-full bg-gray-950 border border-gray-800 rounded-xl px-4 py-2.5 text-xs text-white focus:outline-none focus:border-amber-500" required>
+            </div>
+
+            <div class="flex justify-between items-center text-[11px]">
+                <label class="flex items-center gap-2 text-gray-400 cursor-pointer">
+                    <input type="checkbox" class="accent-amber-500 rounded"> Remember me
+                </label>
+                <a href="#" class="text-amber-400 hover:underline">Forgot password?</a>
+            </div>
+
+            <button type="submit" class="w-full bg-amber-500 hover:bg-amber-400 text-black font-bold py-3 rounded-xl transition text-xs shadow-lg">
+                Access Account
+            </button>
+        </form>
+
+        <p class="text-center text-xs text-gray-500 mt-6">
+            Don't have an account? <a href="#" class="text-amber-400 font-semibold hover:underline">Register here</a>
+        </p>
+    </div>
+</div>
+
+<!-- Modal Toggle Script -->
+<script>
+    function toggleAuthModal() {
+        const modal = document.getElementById('authModal');
+        modal.classList.toggle('hidden');
+        modal.classList.toggle('flex');
+    }
+</script>
+
+</body>
+</html
+
+
+
+
+
+
+  
+
